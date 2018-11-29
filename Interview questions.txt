@@ -1,0 +1,121 @@
+1) How to make an object serializable?
+	implments Serializable interface
+2) How many ways to do autowire?
+	1) Autowire by properties
+		@Autowired
+		private FooFormatter fooFormatter;
+	2) Autowire by constructor
+		@Autowired
+		public void setFooFormatter(FooFormatter fooFormatter) {
+			this.fooFormatter = fooFormatter;
+		}
+	3) Autowire by setter method
+		@Autowired
+		public FooService(FooFormatter fooFormatter) {
+			this.fooFormatter = fooFormatter;
+		}
+		
+3) Autowire Disambiguation 
+		Car is an interface , this has 2 implementation classes SVU and Sedan.
+		if we use like below, which object will be initialized.
+		@Autowired
+		private Car car;
+		
+	way1: 
+		@Autowired
+		@Qualifier("SUV")
+		private Car car;
+	way2: autowire by name, in this case Sedan object will be initialized
+		@Autowired
+		private Formatter sedan;
+		
+4) How HashMap works
+5) Dependency Injection and Inversion of Control
+	
+6) Checked Exception vs Unchecked Exception
+	Checked Exception: at compile time, IOException, FileNotFoundException
+	Unchecked Exception: at run time, NullPointerException, ArithmeticException (Devide by zero)
+	
+7) Overriding Vs Overloading
+	Overriding: Parent Class and Child Class
+	Overloading: Same Class
+
+8) FunctionalInterface (Java 1.8)
+9) NullPointerException(NPE) Optional package (Java 1.8)
+10) Streams (Java 1.8)
+11) Tread Pool Executor
+12) How create thread and write a program for creating 3 threads
+	Actually Thread.start() creates a new thread and have its own execution scenario.
+
+	Thread.start() calls the run() method asynchronously,which changes the state of new Thread to Runnable.
+
+	But Thread.run() does not create any new thread. Instead it execute the run method in the current running thread synchronously.
+
+	If you are using Thread.run() then you are not using the features of multi threading at all.
+	
+	join() -- method for synchronization
+	notify()  -- wait()
+	suspend() -- resume()
+	
+
+13) Difference between WAR & Ear?
+
+14) what is the cost of t2 micro?
+15) you created a eC2 instance and configured in SSH client but you are not able to access it why?
+16) if you run an instance for 5 mins and stopped and again started same instance, how much billing ? will it take all one hour ?
+17) how Auto scaling works?
+18) if threshold reached to maximum, ECS will create new instance. after the threshold drops what will happen to those instance? 
+	which instance will be dropped?
+19) what is the GC in java?
+20) what is the difference between String, StringBuffer and StringBuilder?
+	String is immutable, object stored in Constant String pool
+	StringBuffer, is synchronised and little slow. objects stored in stack
+	stringBuilder, everything is same except Asynchronised
+	
+21) what is cloud front?
+22) what is the cloudformation? what is the exetension of cloudformation?
+23) what are the components you used in AWS?
+24) How to create a ECS?
+25) Controller vs RestController
+26) what is the HTTP Status Code for Delete?
+27) POST VS PUT
+28) Thread Sleep vs Wait
+	Sleep -> wont relase the lock, same thread
+	Wait --> will relase the lock, between threads, 
+29) List of strings, sort the strings with their length
+30) How are we  creating Beans ?
+31) Beans vs component annontation?
+32) You have thread T1, T2, and T3, how will you ensure that thread T2 run after T1 and thread T3 run after T2?
+	using join() method in thread
+33) Which two methods you need to implement to use an Object as key in HashMap?
+	equals and Hashcode
+
+34) Comparable vs Comparator
+	a) Comparable interface can be used to provide single way of sorting 
+		whereas Comparator interface is used to provide different ways of sorting.
+	b) For using Comparable, Class needs to implement it whereas for using Comparator we don’t need 
+		to make any change in the class.
+	c) Comparable interface is in java.lang package whereas Comparator interface is present in java.util package.
+	d) We don’t need to make any code changes at client side for using Comparable, Arrays.sort() or Collection.sort() 
+		methods automatically uses the compareTo() method of the class. For Comparator, 
+		client needs to provide the Comparator class to use in compare() method.
+35) >>, <<, >>>, <<<
+36) Transient vs Volatile
+37) HashCode or Hashing algo
+38) Collection vs Collections
+	Collection:- Interface for most collection classes(List, Map, etc..)
+	Collections : - Utility class for collection framework
+39) Iterator vs Enumarator
+	
+	
+1) Implement Linked list
+2) Arrays vs Collection
+3) Set, vector
+4)
+	
+	https://javarevisited.blogspot.com/2018/07/java-multi-threading-interview-questions-answers-from-investment-banks.html
+	
+	http://www.algolist.net/Data_structures/Binary_search_tree
+	
+	Binary Tree vs Binary search tree
+
