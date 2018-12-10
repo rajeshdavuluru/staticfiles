@@ -4,12 +4,12 @@
 	1) Autowire by properties
 		@Autowired
 		private FooFormatter fooFormatter;
-	2) Autowire by constructor
+	2) Autowire by setter method
 		@Autowired
 		public void setFooFormatter(FooFormatter fooFormatter) {
 			this.fooFormatter = fooFormatter;
 		}
-	3) Autowire by setter method
+	3) Autowire by constructor
 		@Autowired
 		public FooService(FooFormatter fooFormatter) {
 			this.fooFormatter = fooFormatter;
