@@ -115,6 +115,80 @@
 	
 	https://javarevisited.blogspot.com/2018/07/java-multi-threading-interview-questions-answers-from-investment-banks.html
 	
+	
+
+1) Hashmap Implementation
+2) explain each key word in public static void main
+3) Access Specifiers
+4) While iterator opened on ArrayList, if we modify the list what will happen?
+5) Types of Exceptions and Checked and Unchecked exceptions
+6) JPA vs Hibernate
+7) Session vs SessionFactory
+8) if i have 2 data bases, how many Session factories required?
+9) Which one is Synchronized and which one not synchronized in session and Session factory?
+10) what is serialization
+11) Primitive data types
+12) how to create Immutable objects
+13) Scenario:  i want to delete the duplicate objects from DB and show those duplicate records in the UI. Explain this scenario from UI to Backend? and which layer you will do the duplicates logic?
+14) What is JDBC
+15) How to create service class
+16) HTTP methods
+17) Can we have two request have same name?
+18) Explain static keyword
+19) Autoboxing and unboxing
+
+1) Explain Your Project technically as much as possible
+2) How do you update the Large set of data 
+3)  Have you ever involved in DB design, What is EVI?
+4) Did you Work on Hibernate? Is hibernate is good for large set of data?
+5) Do you ever work in Microservices? what is the difference between Microservices and REST?
+6) Have you ever worked on Spring JPA?
+7) How service discovery will work?
+8) Which cloud environment you are working on?
+9) Which version of oracle you are using? 
+
+1) Tell me about your self
+1) What is Spring Config package?
+2) What is shutdown Hook
+3) JPA vs Hibernate?
+4) Spring Boot initializers?
+5) How to change the default configuration
+6) Spring boot Acuators 
+7) Context Switching
+8) Do we need container to run the spring boot app 
+9) IOC vs DI
+10) Spring components
+
+1) Tell me about your project
+2) What are the Advantages of using Spring Boot
+3) Can you explain how to write a REST API in Spring Boot
+4) Can you explain the HTTP Status codes 
+
+1) Array Vs ArrayList and their time complexities
+2) How Hashmap implemented and time complexities
+
+1) ArrayList vs linked list
+2) Parking lot  issue, 
+3) we have a service which is add the number of occurrences of the number, second service which will get the number
+	Add Service: 10
+	Add Service 20
+	Add Service 10
+	
+	Get Service: 10 result will be 2
+4) Hashmap vs ConcurrentHashmap
+5)  service 1  - get the data from UI
+      service 2 - get the data from DB
+	  service 3 - call the router and update the configuration
+	  but user is complaining Router is not updating 
+	  How do you solve the issue?
+6) we have service which is Heap memory filling fast, 
+    Server Heap Memory and GC
+7) Synchronized Block vs Synchronized Method
+
+	
+	
+	
+	
 	http://www.algolist.net/Data_structures/Binary_search_tree
 	
 	Binary Tree vs Binary search tree
