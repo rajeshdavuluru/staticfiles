@@ -193,3 +193,55 @@
 	
 	Binary Tree vs Binary search tree
 
+
+Angular 
+
+1) Types of routes/components loading(Lazy/Eager)   : Eager, Lazy and Preloading
+2) share the data between paren to child components or viceversa
+3) How to restrict the routes based on roles
+4) how to create the routes in Angular
+5) Life cycle methods in 
+6) if any changes happend to the varialbe ..how can you update the model
+7) are you using RxJS? how are you calling services in Angular?
+8)   EventEmitters
+9) JIT vs AOT
+10) Have ever created interceptor in Angular?
+11) interceptor vs interface
+
+
+
+ Design Patterns
+=========================
+Gang of Four Design Patterns
+
+1) Creational Design Patterns
+
+a) Factory Design Pattern:  Without exposing the internal object creation, we can create the objects.
+
+	WorkflowTransformationService.java is an interface
+	BonitaWorkflowTransformationService.java : is concrete class for Bonita workflow
+	PAMWorkflowTransformationService.java: is concrete class for PAM workflow
+	
+	WorkflowTransformationServiceFactory.java  : it is factory class, in this the method we have getWorkflowTransformationService(String type) method.
+		Based on the type , we are creating the WorkflowTransformationService object.
+
+	
+b) Singleton: only one object will be created for JVM
+
+We have a simulation functionality that means we wont call the actual service and will send some dummy data back to service.
+We have some Dao implementation classes with Singleton approach.
+We are creating the instance at the class level
+
+2) Structural Design Patterns
+
+a) Facade Design Patterns:  The facade pattern is appropriate when we have a complex system that we want to expose to clients in a simplified way. 
+	Its purpose is to hide internal complexity behind a single interface that appears simple from the outside.
+	
+	 MigrationFacade.java : Interface for CPM(This interface has abstract methods for Validation, Migration and Backout)
+	 MigrationFacadeImpl.java: is concrete class for Facade class.
+	 
+	 
+3) Behavior Design Patterns
+
+a) Chain of responsibilities
+b) Observer
