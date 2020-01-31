@@ -1,0 +1,222 @@
+Mongo DB local Installation and Commands
+========================================
+
+1) installed mangodb in my local
+
+2) creates a data folder (C:\work\mongodbdata)
+
+3) open cmd prompt; run below command for run the server
+	MONGODB_HOME/bin> mongod --dbpath C:\work\mongodbdata
+	
+4) Open cmd prompt; run below commands
+
+	1) run 
+		MONGODB_HOME/bin> mongo 
+		
+	2) create a data base
+		> use student
+		
+	3) insert documents 
+		> 	db.student.insert({studentId:"1001", firstName:"FName1", lastName: "LName1"});
+			db.student.insert({"studentId":"1002", "firstName":"FName2", "lastName": "LName2"});
+			
+			 db.student.insertMany([{"studentId":1004, "firstName":"FName4", "lastName": "LName4"}, {"studentId":1005, "firstName":"FName5", "lastName": "LName5"}]);
+
+	4) to view the documents
+		> db.student.find();
+		
+		//prettyfy the documents
+		> db.student.find().pretty();
+	
+	5) to remove documents
+		db.student.remove({});
+		
+	6) to list databases
+		show dbs;
+	
+	7) drop data base (which ever db you are in, that db will be dropped)
+			db.dropDatabase();   
+	
+	8) DB statistics
+		db.stats();
+	
+	9)  create collection
+		 db.createCollection("testcollection");
+	
+	10) show collections
+			show collections
+			db.getCollectionNames();
+	
+	11) drop collection
+			db.testcollection.drop()
+			
+	12)  Where clauses
+			a)  db.student.find({"studentId":1001}).pretty();    // where studentId = 1001
+			
+			b) db.student.find({"studentId": {"$lt":1003}}).pretty();  // where studentId < 1003
+			
+			c) db.student.find({"studentId": {"$lte":1003}}).pretty();  // where studentId <= 1003
+			
+			d)  db.student.find({"studentId": {"$gt":1001}}).pretty();   // where studentId > 1003
+			
+			e) db.student.find({"studentId": {"$gte":1001}}).pretty();  // where studentId >= 1003
+			
+	13) AND 
+			 db.student.find({ $and : [ {"studentId":1001}, {"firstName":"FName1"}] }).pretty();    // where studentId = 1001 and firstName = "FName1"
+	
+	14) OR
+			db.student.find({ $or : [ {"studentId":1001}, {"firstName":"FName2"}] }).pretty();   //  where studentId = 1001 and firstName = "FName2"
+			
+	15)  
+			db.student.update({"firstName":"FName3"}, {$set:{"lastName":"LNameNew3"}});   // set lastName = "LNameNew3" where firstName="FName3"
+	
+	16)  updating the entire document by id
+			db.student.save({ "_id" : ObjectId("5c900a5202cf98c7d3b28717"), "studentId" : 1002, "firstName" : "FNameNew2", "lastName" : "LNameNew2" });
+	
+	17) db.student.remove({"_id": ObjectId("5c90d3dcf5ac1074c8c0ad2c")});  
+	
+	18)  Projections:  you can select what ever columns you need 
+			db.student.find({}, {"_id":0, "studentId":1, "firstName":1, "lastName":1});
+	
+	19) limit the number of documents
+			db.student.find().limit(1);
+	
+	20)  Skip the documents
+			db.student.find().limit(2).skip(1);
+	
+	21)  order of the documents
+	
+		 db.student.find().sort({"studentId":1});   // Ascending order
+		 
+		 db.student.find().sort({"studentId":-1});  // descending order
+		 
+	22) creating the index
+		
+			db.student.ensureIndex({"studentId":1})  // index in Ascending order
+			
+			db.student.ensureIndex({"studentId":-1})  // index in descending order
+			
+	23) Aggregation
+		
+			> db.student.aggregate([{$group : {_id : "$firstName", num_tutorial : {$sum : "$studentId"}}}]);
+			
+				O/P:
+					{ "_id" : "FName1", "num_tutorial" : 2004 }
+					{ "_id" : "FNameNew2", "num_tutorial" : 1002 }
+			> db.student.aggregate([{$group : {_id : "$firstName", num_tutorial : {$min : "$studentId"}}}]);
+				
+				O/P:
+					{ "_id" : "FName1", "num_tutorial" : 1001 }
+					{ "_id" : "FNameNew2", "num_tutorial" : 1002 }
+			> db.student.aggregate([{$group : {_id : "$firstName", num_tutorial : {$max : "$studentId"}}}]);
+			
+				O/P:
+					{ "_id" : "FName1", "num_tutorial" : 1003 }
+					{ "_id" : "FNameNew2", "num_tutorial" : 1002 }
+			> db.student.aggregate([{$group : {_id : "$firstName", num_tutorial : {$avg : "$studentId"}}}]);
+			
+				O/P:
+					{ "_id" : "FName1", "num_tutorial" : 1002 }
+					{ "_id" : "FNameNew2", "num_tutorial" : 1002 }
+			> db.student.aggregate([{$group : {_id : "$firstName", num_tutorial : {$push : "$studentId"}}}]);
+			
+				O/P:
+					{ "_id" : "FName1", "num_tutorial" : [ 1001, 1003 ] }
+					{ "_id" : "FNameNew2", "num_tutorial" : [ 1002 ] }
+			> db.student.aggregate([{$group : {_id : "$firstName", num_tutorial : {$addToSet : "$studentId"}}}]);
+			
+				O/P:
+					{ "_id" : "FName1", "num_tutorial" : [ 1003, 1001 ] }
+					{ "_id" : "FNameNew2", "num_tutorial" : [ 1002 ] }
+			
+			> db.student.aggregate([{$group : {_id : "$firstName", num_tutorial : {$first : "$studentId"}}}]);
+			
+				O/P:
+					{ "_id" : "FName1", "num_tutorial" : 1001 }
+					{ "_id" : "FNameNew2", "num_tutorial" : 1002 }
+				
+			> db.student.aggregate([{$group : {_id : "$firstName", num_tutorial : {$last : "$studentId"}}}]);  
+
+				O/P:
+					{ "_id" : "FName1", "num_tutorial" : 1003 }                                                             
+					{ "_id" : "FNameNew2", "num_tutorial" : 1002 }           
+
+	24)  
+			
+		db.logout();
+	
+	25) 
+		> show users;
+		> db.getUsers();
+		
+	26)  Admin commands
+	
+		db.student.stats();
+		db.printCollectionStats();
+		> db.student.dataSize();  // size of the collection
+			426
+		> db.student.storageSize(); // size of documents
+			36864
+		> db.student.totalSize();  // total size of collection and indexes
+			147456
+		> db.student.totalIndexSize();  // total index sizes
+			110592
+			
+			
+			 db.getCollection("system.sql").find({ "$sql": "create table foo (c1 int)" })
+			 
+			 
+			 
+ 1) Combining to documents
+		db.getCollections("studetnCollection").aggregate(
+			[
+				{
+					$lookup:{
+						from : <foreign_collection>
+						localField:  <local field name>
+						foreignField: <foreign field>
+						as : <name>
+					}
+				}
+			]
+		);
+		
+		db.getCollection('users').aggregate([
+			{
+				$lookup: {
+					from: "userinfo",
+					localField: "userId",
+					foreignField: "userId",
+					as: "userInfoData"
+				}
+			},
+			{
+				$lookup: {
+					from: "userrole",
+					localField: "userId",
+					foreignField: "userId",
+					as: "userRoleData"
+				}
+			},
+			{ $unwind: { path: "$userInfoData", preserveNullAndEmptyArrays: true }},
+			{ $unwind: { path: "$userRoleData", preserveNullAndEmptyArrays: true }}
+		])
+		
+		Before Unwind:
+		{ "_id" : 1, "item" : "ABC1", sizes: [ "S", "M", "L"] }
+		
+		After unwind:
+		{ "_id" : 1, "item" : "ABC1", "sizes" : "S" }
+		{ "_id" : 1, "item" : "ABC1", "sizes" : "M" }
+		{ "_id" : 1, "item" : "ABC1", "sizes" : "L" }
+		
+ 2) in query  
+		$in
+		$nin
+		
+ 3) System time  and time, Date and Timestamps functions
+		 $currentDate    
+ 4) outer joins(left, right and innerjoins)
+ 5)can we write SP, functions etc
+			 
+			 
