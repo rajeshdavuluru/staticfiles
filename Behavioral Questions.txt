@@ -1,0 +1,162 @@
+35 behavioral questions asked in 95% of Amazon interviews with examples
+
+Team / time management (positive & negative) https://youtu.be/CQG4Ui0oAmk 
+
+1. Tell me about a time when you were not able to meet a time commitment. What prevented you from meeting it? What was the outcome and what did you learn from it?
+
+		Situation:  i was wrongly estimated the some of the items, as resulting of that i delivered the items one sprint late
+  		Task:    
+		Action:
+		Result:
+	 
+2. Describe a long-term project that you managed. How did you keep everything moving along in a timely manner?
+
+3. Give me an example of a time when you set a goal and were able to meet or achieve it
+
+	Situation:   When i was joined in XXXXX, i have very little knowledge on what the company's business
+	Task:   i want to get good understanding of their business
+	Action:  I got the reference courses from my manger/team. XXXXX has a VZ Knowledge site there we can find all XXXXX products and business info. I have selected some of the video and material from them  which 
+		are suitable for me and gone through the. if i got the doubts used to check with team/manager for clarification.
+	Result: that way in next quarter i had very fair knowledge on VZ products and markets.
+
+Adaptation https://youtu.be/ys7fLcH5gpg 
+
+4. Tell me about a time you had to quickly adjust your work priorities to meet changing demands.
+
+		Situation:  i am working on the MVP 1 priorities , suddenly we got the new requirements for preparing for road show in Toyota
+		Task:  i have to mock up the some of the key APIs and get it ready for mobile team can consume 
+		Action:  i stretched little bit  and completed the Mocking up the APIs/ Consuming the APIs.
+		Result:  as a result, im able to deliver the tasks which are required for road show
+
+Team / decision https://youtu.be/3NExTeMnobU
+5. an example when you had to push back to HQ or challenged a decision
+
+6. Tell me about the toughest decision you've had to make in the past six months
+	Situation: Downsize the team because of Budget cut and all.
+	Task: as a lead of the team, i have to provide feedback to my manager
+	Action: i know this is very tough decision and we cut couple of UI team memebers and converted couple of Backend developers to full stack . 
+	Result: Initial couple of Sprints we were little lack in UI side, now we are doing good.
+	
+7. Tell me about a decision that you regret.
+
+Team / leadership https://youtu.be/Tg6BVRTsuic 
+8. What did you do when you needed to motivate a group of individuals?
+	Go for a  lunch and Starbucks, and have a coffee and spend some time. 
+	
+9. Tell me about a time you stepped up into a leadership role
+	
+
+Team / communication & negotiation https://youtu.be/UJXkaide9bU 
+10. Do you collaborate well?
+11. Describe a situation when you negotiated with others in your organization to reach agreement.
+
+Team / coworkers https://youtu.be/ZsxkoZdyEcw 
+12. We've all had to work with people that don't like us. How do you deal with someone that doesn't like you?
+
+	Situation: 
+	Task:
+	Action:
+	Result:
+	
+
+13. We all make mistakes we wish we could take back. Tell me about a time you wish you’d handled a situation differently with a colleague.
+
+14. The last time you had to apologize to someone
+
+Team / conflict https://youtu.be/Zz8iQ852YMs 
+15. Give me an example of a time you faced a conflict while working on a team. How did you handle that?
+
+16. Tell me about a time when you received negative feedback from your manager. How did you respond?
+
+Problem solving https://youtu.be/2XxCUain1IU 
+17. Tell me about a time when you missed an obvious solution to a problem
+	Situation: In my previous Tayota project, i have to create a health report and create a PDF and give it as a Byte Stream to mobile UI.
+	Task:  for this i need to call the Health Report app api and create a health report and get the json.
+	Action:  i was calling an API which is creating the report but it is not persisting the report. I was getting the JSON and generating the PDF and sending byte stream to UI. But while doing the testing, im not able to find the report 
+		in the report in Health Report app. actual solution should be Domain team has to create a report, persist and give JSON back to me. 
+	Results:  as a result i missed the obvious solution.
+	
+18. A time when you faced a problem that had multiple possible solutions
+
+19. Tell me about a time when you came up with a new approach to a problem.
+20. Describe a time when you anticipated potential problems and developed preventive measures.
+21. Describe a situation in which you found a creative way to overcome an obstacle.
+
+Strategy / data https://youtu.be/oRGKHTiM29E 
+22. How have you leveraged data to develop a strategy?
+23. a time when you were 75% through a project, & you had to pivot strategy
+24. Tell me about a time when you had to choose between technologies for a project
+25. Tell me about a time you had to deal with ambiguity
+
+
+
+Innovation https://youtu.be/774ovkE2y5I 
+26. What’s the most innovative new idea that you have implemented?
+
+Ownership principle https://youtu.be/Rn3EjvukTkI 
+
+27. Describe a time when you sacrificed short term goals for long term success
+
+	Single Source Approach
+		i) Situation : Data discrepancy between 3 Logical Systems(yyyy, zzz & aaaaaaa). Proposal from one of the member is create dummy records.
+		ii) Task: decrease the Data discrepancy 
+		iii) Action:  XO Prod -> XO Staging(data masking) -> XXXXX Staging -> for here all 3 systems reading data and creating. with this approach we are getting lot of discrepancies like Speed, DLCI, VLAN ID, ENCAP etc. 
+			because each system interpreting differently and loading differently.  Instead of everyone is reading from the Staging. First yyyy will populate Single Source tables with all the required fields. Next zzz will read 
+			the data and updated SPEED & ENCAP fields if it sees any difference in the yyyy data with actual network. aaaaaaa will read the final data and load their tables.
+			with this approach we can reduce the fallouts.		
+		iv) Results: with this approach we were able decrease the fallouts. 
+	 
+28. Provide an example of when you personally demonstrate ownership.
+
+
+Strength / weakness https://youtu.be/q8fK73QjmbA 
+29. What's your greatest strength
+	My Strength is my problem Solving Skills and accepting challenging tasks.
+		- One of my project we want to change the deployment strategy. for this we want to implement the Shared Library concept in Weblogic.  there are couple of Senior resources tried that approach,
+		but no one succeed in that. i was able to complete it No that application is successfully running in Prod quite sometime.
+  
+30. Biggest weakness
+	
+
+Clients https://youtu.be/OFEUzyB12rE 
+31. We all deal with difficult customers from time to time. Tell me about a challenging client-facing situation and how you handled it.
+
+32. How do you show customer obsession?
+
+Failure https://youtu.be/eaUUeFoB9CQ 
+33. Tell me about a time you recovered from a difficult situation
+34. Tell me about a time you failed and what you learned from it
+
+35. Why Amazon https://youtu.be/H_KGM0i9jkA
+
+
+https://www.rooftopslushie.com/
+https://www.youtube.com/watch?v=H_KGM0i9jkA
+https://www.thebalancecareers.com/behavioral-job-interview-questions-2059620
+https://www.thebalancecareers.com/top-behavioral-interview-questions-2059618
+
+
+
+
+What makes you applying this position and why you want to apply this position?
+
+I’ve been working in Java & J2EE more than a decade and  I enjoy a lot and want to continue growing in. 
+I applied for this position because after reading the job description, it seems like a great opportunity to work both old (Mainframe tools) and new technologies (PCF Cloud, CI/CD etc ) 
+And since I’ve been doing this  type of work for all these years ,  I’d be able to hit the ground running and start contributing immediately to your team’s efforts.
+
+Why you want to join Charles Schwab?
+
+I always look for 2 things for my jobs
+
+1) Culture, customer obsession and Professional growth in the job,
+	based on research and analysis, Charles Schwab is this company to help all their employee to to grow and Owing their careers 
+2) Tech Stack : As a technology enthusiest i would like work with tech company like charles Schwab
+ 
+
+ 
+ What are the 3 key strengths
+ 1) Adaptability
+ 2) Problem Solving 
+ 3) interest in learning the new things
+ 
+
