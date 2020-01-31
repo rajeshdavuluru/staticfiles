@@ -142,6 +142,8 @@
 17) Can we have two request have same name?
 18) Explain static keyword
 19) Autoboxing and unboxing
+   Autoboxing: Converting the primitive data type to its corresponding wrapper class
+   unboxing: converting wrapper class to primitive data type
 
 1) Explain Your Project technically as much as possible
 2) How do you update the Large set of data 
