@@ -1,0 +1,104 @@
+
+1) React Interfaces
+2) React Types
+3) Diffrence between Interface and Types
+4) Type script vs Javascript
+5) what are the features/benifits in Typescript?
+6) What is Pure components
+7) why do we need pure component , as we have vitual dom
+8) what is the virtual dom
+9) react Hooks and what problem those are going to solve
+10) Funcational component vs Class component(Stateless vs Stateful)
+11) Props vs state
+12) Typescript Prototype
+13) Higher Order components
+14) useState vs setState
+15) what is redux
+16) components in redux
+17) React Component life cycle methods
+18) Hash Router vs Browser Router
+19) Switch in react Router
+20) what is JSX
+21) React Fragments
+22) What are the arrow functions? how they are used?
+23) what is synthetic events?
+24) what is refs? how they are used?
+25) Controlled vs uncontrolled components
+26) what is the context?
+27) Fetch vs Axios(Calling apis)
+28) How to set the session data in Cookies?
+29) What are the best apporch for storing session data?
+30) what is localstorage and how to implement it?
+31) How many ways we can pass the props in react
+32) Runtime error in React (error Boundries)
+33) Redux Thunk and Saga? how to configure and invoke them?
+34) React memo ? how to improve preformance?
+35) 
+
+=============================================
+
+1) Event bubbling
+2) Generator functions
+3) Closures
+4) Prototypes
+5) Function Decalration vs Expression
+6) Promises 
+7) Event Chaining
+8) == and ===
+9) let vs var
+10) call back functions
+11) setTimeOut
+12) Undefined vs Null
+13) 3 methods in javascript(call, bind, render)
+14) How to write inheritence in java script?
+15) Event chaining
+16) How to empty JS Array? (Splice)
+17) Splice, slice, filter, forEach(all Javascript array functions)
+18) 
+
+====================
+1) CSS Box model
+2) how to display div half of the screen
+3) 
+
+import React from "react";
+
+interface ITestProps{
+    name: string
+}
+
+interface TypeTestProps{
+    name: string
+}
+
+export default class Test extends React.Component<ITestProps>{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return ({
+
+        });
+    }
+
+}
+
+export const Menus: React.FC<props> = () => {
+    render(){
+
+    }
+}
+
+------------------
+
+
+reference:
+https://www.guru99.com/typescript-vs-javascript.html#:~:text=KEY%20DIFFERENCE,doesn't%20support%20this%20feature.
+https://www.sitepoint.com/react-with-typescript-best-practices/
+
+https://github.com/typescript-cheatsheets/react#types-or-interfaces
+
+https://github.com/sudheerj/reactjs-interview-questions#what-are-pure-components
+
+
+https://react-typescript-cheatsheet.netlify.app/docs/basic/examples
