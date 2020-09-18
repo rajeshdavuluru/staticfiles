@@ -33,7 +33,9 @@
 32) Runtime error in React (error Boundries)
 33) Redux Thunk and Saga? how to configure and invoke them?
 34) React memo ? how to improve preformance?
-35) 
+35) yield (put/fork/spawn/call)
+36) redux sagas
+37)
 
 =============================================
 
@@ -59,7 +61,7 @@
 ====================
 1) CSS Box model
 2) how to display div half of the screen
-3) 
+3) Pixel vs rem vs em
 
 import React from "react";
 
